@@ -9,8 +9,7 @@ pipeline {
                 }		
  		            stage('Integration test') {
 			                  steps {
-				                    sh 'aws cloudformation deploy --template-file /fargate-cloudformation-example
-/ECR.yml --stack-name ECR-Stack'					
+				                    sh 'aws cloudformation deploy --template-file ECR.yml --stack-name my-ecr-repo'					
 			                  }
 		            }				
 	      }		 	
