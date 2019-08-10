@@ -1,7 +1,8 @@
-MyRepository: 
+Resources:
+  MyRepository: 
   Type: AWS::ECR::Repository
   Properties: 
-    RepositoryName: "Test-Repo"
+    RepositoryName: "test-repository"
     RepositoryPolicyText: 
       Version: "2012-10-17"
       Statement: 
@@ -10,7 +11,8 @@ MyRepository:
           Effect: Allow
           Principal: 
             AWS: 
-              - "arn:aws:iam::394510651405:user/Jenkins"
+              - "arn:aws:iam::123456789012:user/Bob"
+              - "arn:aws:iam::123456789012:user/Alice"
           Action: 
             - "ecr:GetDownloadUrlForLayer"
             - "ecr:BatchGetImage"
