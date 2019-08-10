@@ -1,11 +1,11 @@
 Resources:
   MyRepository: 
-  Type: AWS::ECR::Repository
-  Properties: 
-    RepositoryName: "test-repository"
-    RepositoryPolicyText: 
-      Version: "2012-10-17"
-      Statement: 
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: "Test-ECR"
+      RepositoryPolicyText: 
+        Version: "2012-10-17"
+        Statement: 
         - 
           Sid: AllowPushPull
           Effect: Allow
