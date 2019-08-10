@@ -9,7 +9,8 @@ pipeline {
                 }		
  		            stage('Integration test') {
 			                  steps {
-				                    sh 'ansible-playbook ECR.yml'					
+				                    sh 'aws cloudformation deploy --template-file /fargate-cloudformation-example
+/ECR.yml --stack-name ECR-Stack'					
 			                  }
 		            }				
 	      }		 	
