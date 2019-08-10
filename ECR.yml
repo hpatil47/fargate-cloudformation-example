@@ -11,8 +11,7 @@ Resources:
           Effect: Allow
           Principal: 
             AWS: 
-              - "arn:aws:iam::123456789012:user/Bob"
-              - "arn:aws:iam::123456789012:user/Alice"
+              - "arn:aws:iam::394510651405:user/Jenkins"
           Action: 
             - "ecr:GetDownloadUrlForLayer"
             - "ecr:BatchGetImage"
