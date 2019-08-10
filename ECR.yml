@@ -1,0 +1,21 @@
+MyRepository: 
+  Type: AWS::ECR::Repository
+  Properties: 
+    RepositoryName: "Test-Repo"
+    RepositoryPolicyText: 
+      Version: "2012-10-17"
+      Statement: 
+        - 
+          Sid: AllowPushPull
+          Effect: Allow
+          Principal: 
+            AWS: 
+              - "arn:aws:iam::394510651405:user/Jenkins"
+          Action: 
+            - "ecr:GetDownloadUrlForLayer"
+            - "ecr:BatchGetImage"
+            - "ecr:BatchCheckLayerAvailability"
+            - "ecr:PutImage"
+            - "ecr:InitiateLayerUpload"
+            - "ecr:UploadLayerPart"
+            - "ecr:CompleteLayerUpload"
